@@ -4,5 +4,151 @@ body {
   background: #eee;
   margin: 0;
   padding: 0;
-  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.container {
+  width: 100%;
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.product-catalog {
+  display: flex;
+  max-width: 100%;
+  overflow: auto;
+
+  .catalog-description {
+    flex: 0 0 240px;
+    max-width: 240px;
+  }
+}
+
+.multicolor {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  & > div,
+  li {
+    font-weight: bold;
+    padding: 0.5rem;
+
+    &:first-child {
+      height: 380px;
+    }
+
+    &:nth-child(2n) {
+      background: #fff;
+    }
+  }
+}
+
+.product-item {
+
+  & > div {
+    font-weight: normal;
+  }
+
+  .product-image {
+    font-weight: bold;
+
+    .image {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 296px;
+      height: 296px;
+      background: #fff;
+
+      img {
+        display: block;
+      }
+    }
+  }
+
+  .rating {
+    display: flex;
+    align-items: center;
+
+    .star {
+
+      img {
+        display: block;
+        width: 20px;
+        height: auto;
+      }
+    }
+
+    .rating-value {
+      display: block;
+      font-size: 0.875rem;
+      margin-left: 0.5rem;
+    }
+  }
+
+  .price {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .new-price {
+      color: #ff3c3c;
+      font-size: 1.125rem;
+      font-weight: bold;
+    }
+
+    .old-price {
+      color: #666;
+      font-size: 0.875rem;
+      text-decoration: line-through;
+    }
+  }
+
+  .product-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0;
+      padding: 0.5rem;
+      border-radius: 0.125rem;
+      cursor: pointer;
+
+      &.compare-btn {
+        flex: 0 0 20%;
+        max-width: 20%;
+        background: transparent;
+        border: 2px solid #ff9f9f;
+      }
+
+      &.cart-btn {
+        flex: 0 0 75%;
+        max-width: 75%;
+        color: #fff;
+        font: bold 0.875rem/1em -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+        text-transform: uppercase;
+        background: green;
+        border: 2px solid green;
+
+        img {
+          margin-right: 0.5rem;
+        }
+      }
+
+      img {
+        display: block;
+      }
+    }
+  }
 }
