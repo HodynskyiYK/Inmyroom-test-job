@@ -1,3 +1,5 @@
+// https://github.com/Archakov06/inmyroom-test-job
+
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './style.scss'
